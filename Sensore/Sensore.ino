@@ -111,11 +111,14 @@ void reconnect() {
 void setup() {
 	pinMode(Led, OUTPUT);
 	Serial.begin(115200);
-	bool success = bme.begin(0x76);
-	if (!success) 
+	if (!bme.begin())
 	{
-		Serial.println("errore del sensore");
-		while (true);
+		
+		while (bme.begin()) 
+		{
+			Serial.println("errore del sensore");
+			delay(500);
+		}
 
 	}
 	setup_wifi();
