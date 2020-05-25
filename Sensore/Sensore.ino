@@ -19,9 +19,9 @@ Adafruit_BME280 bme;
 
 
 
-const char* ssid = "ASUS";
-const char* password = "20082015";
-const char* mqtt_server = "192.168.2.15";
+const char* ssid = "*****";
+const char* password = "******";
+const char* mqtt_server = "*******";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
